@@ -30,9 +30,9 @@ Runit:
     $ sudo salt "*" state.sls shellshock
 ```
 
+---
 
 bonus: Test shellshock from salt:
----------------------------------
 
 https://twitter.com/johan_moreau/status/515226448270213121
 
