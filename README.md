@@ -27,5 +27,15 @@ gitfs_remotes:
 Runit:
 
 ```sh
-    $ sudo salt "*" state.sls shelshock
+    $ sudo salt "*" state.sls shellshock
+```
+
+
+bonus: Test shellshock from salt:
+---------------------------------
+
+https://twitter.com/johan_moreau/status/515226448270213121
+
+```
+$ sudo salt -G 'kernel:Linux' cmd.run "env x='() { :;}; echo __bad' bash -c 'echo __good' 2>&1 |grep __"
 ```
